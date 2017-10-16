@@ -19,10 +19,12 @@ package com.ivianuu.timberextensions
 import timber.log.Timber
 
 /** Log a verbose message with optional format args.  */
-fun verbose(message: String, vararg args: Any) = Timber.v(message, args)
+fun verbose(message: String, vararg args: Any) {
+    Timber.v(message, args)
+}
 
 /** Log a verbose exception and a message with optional format args.  */
-fun verbose(t: Throwable, message: String, vararg args: Any) = Timber.v(t, message, args)
+fun verbose2(t: Throwable, message: String, vararg args: Any) = Timber.v(t, message, args)
 
 /** Log a verbose exception.  */
 fun verbose(t: Throwable) = Timber.v(t)
