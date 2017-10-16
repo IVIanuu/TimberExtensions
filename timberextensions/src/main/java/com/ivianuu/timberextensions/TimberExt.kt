@@ -19,67 +19,67 @@ package com.ivianuu.timberextensions
 import timber.log.Timber
 
 /** Log a verbose message with optional format args.  */
-inline fun verbose(message: String, vararg args: Any) = Timber.v(message, args)
+fun verbose(message: String, vararg args: Any) = Timber.v(message, args)
 
 /** Log a verbose exception and a message with optional format args.  */
-inline fun verbose(t: Throwable, message: String, vararg args: Any) = Timber.v(t, message, args)
+fun verbose(t: Throwable, message: String, vararg args: Any) = Timber.v(t, message, args)
 
 /** Log a verbose exception.  */
-inline fun verbose(t: Throwable) = Timber.v(t)
+fun verbose(t: Throwable) = Timber.v(t)
 
 /** Log a debug message with optional format args.  */
-inline fun debug(message: String, vararg args: Any) = Timber.d(message, args)
+fun debug(message: String, vararg args: Any) = Timber.d(message, args)
 
 /** Log a debug exception and a message with optional format args.  */
-inline fun debug(t: Throwable, message: String, vararg args: Any) = Timber.d(t, message, args)
+fun debug(t: Throwable, message: String, vararg args: Any) = Timber.d(t, message, args)
 
 /** Log a debug exception.  */
-inline fun debug(t: Throwable) = Timber.d(t)
+fun debug(t: Throwable) = Timber.d(t)
 
 /** Log an info message with optional format args.  */
-inline fun info(message: String, vararg args: Any) = Timber.i(message, args)
+fun info(message: String, vararg args: Any) = Timber.i(message, args)
 
 /** Log an info exception and a message with optional format args.  */
-inline fun info(t: Throwable, message: String, vararg args: Any) = Timber.i(t, message, args)
+fun info(t: Throwable, message: String, vararg args: Any) = Timber.i(t, message, args)
 
 /** Log an info exception.  */
-inline fun info(t: Throwable) = Timber.i(t)
+fun info(t: Throwable) = Timber.i(t)
 
 /** Log a warning message with optional format args.  */
-inline fun warn(message: String, vararg args: Any) = Timber.w(message, args)
+fun warn(message: String, vararg args: Any) = Timber.w(message, args)
 
 /** Log a warning exception and a message with optional format args.  */
-inline fun warn(t: Throwable, message: String, vararg args: Any) = Timber.w(t, message, args)
+fun warn(t: Throwable, message: String, vararg args: Any) = Timber.w(t, message, args)
 
 /** Log a warning exception.  */
-inline fun warn(t: Throwable) = Timber.w(t)
+fun warn(t: Throwable) = Timber.w(t)
 
 /** Log an error message with optional format args.  */
-inline fun error(message: String, vararg args: Any) = Timber.e(message, args)
+fun error(message: String, vararg args: Any) = Timber.e(message, args)
 
 /** Log an error exception and a message with optional format args.  */
-inline fun error(t: Throwable, message: String, vararg args: Any) = Timber.e(t, message, args)
+fun error(t: Throwable, message: String, vararg args: Any) = Timber.e(t, message, args)
 
 /** Log an error exception.  */
-inline fun error(t: Throwable) = Timber.e(t)
+fun error(t: Throwable) = Timber.e(t)
 
 /** Log an assert message with optional format args.  */
-inline fun wtf(message: String, vararg args: Any) = Timber.wtf(message, args)
+fun wtf(message: String, vararg args: Any) = Timber.wtf(message, args)
 
 /** Log an assert exception and a message with optional format args.  */
-inline fun wtf(t: Throwable, message: String, vararg args: Any) = Timber.wtf(t, message, args)
+fun wtf(t: Throwable, message: String, vararg args: Any) = Timber.wtf(t, message, args)
 
 /** Log an assert exception.  */
-inline fun wtf(t: Throwable) = Timber.wtf(t)
+fun wtf(t: Throwable) = Timber.wtf(t)
 
 /** Log at `priority` a message with optional format args.  */
-inline fun log(priority: Int, message: String, vararg args: Any) = Timber.log(priority, message, args)
+fun log(priority: Int, message: String, vararg args: Any) = Timber.log(priority, message, args)
 
 /** Log at `priority` an exception and a message with optional format args.  */
-inline fun log(priority: Int, t: Throwable, message: String, vararg args: Any) = Timber.log(priority, t, message)
+fun log(priority: Int, t: Throwable, message: String, vararg args: Any) = Timber.log(priority, t, message)
 
 /** Log at `priority` an exception.  */
-inline fun log(priority: Int, t: Throwable) = Timber.log(priority, t)
+fun log(priority: Int, t: Throwable) = Timber.log(priority, t)
 
 /** Set a one-time tag for use on the next logging call.  */
-inline fun tag(tag: String) = Timber.tag(tag)
+fun tag(tag: String) = Timber.tag(tag)
