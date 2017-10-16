@@ -18,6 +18,10 @@ package com.ivianuu.timberextensions
 
 import timber.log.Timber
 
+fun deinErnstMan(): Boolean {
+    return true
+}
+
 /** Log a verbose message with optional format args.  */
 fun verbose(message: String, vararg args: Any) = Timber.v(message, args)
 
