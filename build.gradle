@@ -29,9 +29,7 @@ buildscript {
 
         mavenPlugin = 'com.github.dcendents:android-maven-gradle-plugin:1.5'
 
-        supportVersion = '26.1.0'
-        supportAnnotations = "com.android.support:support-annotations:$rootProject.ext.supportVersion"
-        supportAppCompat = "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
+        supportAppCompat = 'com.android.support:appcompat-v7:26.1.0'
 
         timber = 'com.jakewharton.timber:timber:4.5.1'
     }

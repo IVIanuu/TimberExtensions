@@ -19,9 +19,6 @@ android {
 }
 
 dependencies {
-    // Annotations
-    api rootProject.ext.supportAnnotations
-
     // Kotlin
     api rootProject.ext.kotlinStdlib
 
