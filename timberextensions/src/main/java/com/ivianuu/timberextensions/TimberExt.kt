@@ -18,68 +18,72 @@ package com.ivianuu.timberextensions
 
 import timber.log.Timber
 
-/** Log a verbose message with optional format args.  */
-fun verbose(message: String, vararg args: Any) = Timber.v(message, *args)
+/** Invokes the function only if there are timber trees */
+inline fun ifPlanted(func: () -> Unit) {
+    if (Timber.treeCount() != 0) {
+        func()
+    }
+}
 
-/** Log a verbose exception and a message with optional format args.  */
-fun verbose(t: Throwable, message: String, vararg args: Any) = Timber.v(t, message, *args)
+/** Calls the timber v method if there are timber trees */
+inline fun v(message: () -> String) = ifPlanted { Timber.v(message()) }
 
-/** Log a verbose exception.  */
-fun verbose(t: Throwable) = Timber.v(t)
+/** Calls the timber v method if there are timber trees */
+inline fun v(t: Throwable, message: () -> String) = ifPlanted { Timber.v(t, message()) }
 
-/** Log a debug message with optional format args.  */
-fun debug(message: String, vararg args: Any) = Timber.d(message, *args)
+/** Calls the timber v method if there are timber trees */
+fun v(t: Throwable) = Timber.v(t)
 
-/** Log a debug exception and a message with optional format args.  */
-fun debug(t: Throwable, message: String, vararg args: Any) = Timber.d(t, message, *args)
+/** Calls the timber d method if there are timber trees */
+inline fun d(message: () -> String) = ifPlanted { Timber.d(message()) }
 
-/** Log a debug exception.  */
-fun debug(t: Throwable) = Timber.d(t)
+/** Calls the timber d method if there are timber trees */
+inline fun d(t: Throwable, message: () -> String) = ifPlanted { Timber.d(t, message()) }
 
-/** Log an info message with optional format args.  */
-fun info(message: String, vararg args: Any) = Timber.i(message, *args)
+/** Calls the timber d method if there are timber trees */
+fun d(t: Throwable) = Timber.d(t)
 
-/** Log an info exception and a message with optional format args.  */
-fun info(t: Throwable, message: String, vararg args: Any) = Timber.i(t, message, *args)
+/** Calls the timber i method if there are timber trees */
+inline fun i(message: () -> String) = ifPlanted { Timber.i(message()) }
 
-/** Log an info exception.  */
-fun info(t: Throwable) = Timber.i(t)
+/** Calls the timber í method if there are timber trees */
+inline fun i(t: Throwable, message: () -> String) = ifPlanted { Timber.i(t, message()) }
 
-/** Log a warning message with optional format args.  */
-fun warn(message: String, vararg args: Any) = Timber.w(message, *args)
+/** Calls the timber i method if there are timber trees */
+fun i(t: Throwable) = Timber.i(t)
 
-/** Log a warning exception and a message with optional format args.  */
-fun warn(t: Throwable, message: String, vararg args: Any) = Timber.w(t, message, *args)
+/** Calls the timber w method if there are timber trees */
+inline fun w(message: () -> String) = ifPlanted { Timber.w(message()) }
 
-/** Log a warning exception.  */
-fun warn(t: Throwable) = Timber.w(t)
+/** Calls the timber w method if there are timber trees */
+inline fun w(t: Throwable, message: () -> String) = ifPlanted { Timber.w(t, message()) }
 
-/** Log an error message with optional format args.  */
-fun error(message: String, vararg args: Any) = Timber.e(message, *args)
+/** Calls the timber w method if there are timber trees */
+fun w(t: Throwable) = Timber.w(t)
 
-/** Log an error exception and a message with optional format args.  */
-fun error(t: Throwable, message: String, vararg args: Any) = Timber.e(t, message, *args)
+/** Calls the timber e method if there are timber trees */
+inline fun e(message: () -> String) = ifPlanted { Timber.e(message()) }
 
-/** Log an error exception.  */
-fun error(t: Throwable) = Timber.e(t)
+/** Calls the timber e method if there are timber trees */
+inline fun e(t: Throwable, message: () -> String) = ifPlanted { Timber.e(t, message()) }
 
-/** Log an assert message with optional format args.  */
-fun wtf(message: String, vararg args: Any) = Timber.wtf(message, *args)
+/** Calls the timber e method if there are timber trees */
+fun e(t: Throwable) = Timber.e(t)
 
-/** Log an assert exception and a message with optional format args.  */
-fun wtf(t: Throwable, message: String, vararg args: Any) = Timber.wtf(t, message, *args)
+/** Calls the timber wtf method if there are timber trees */
+inline fun wtf(message: () -> String) = ifPlanted { Timber.wtf(message()) }
 
-/** Log an assert exception.  */
+/** Calls the timber wtf method if there are timber trees */
+inline fun wtf(t: Throwable, message: () -> String) = ifPlanted { Timber.wtf(t, message()) }
+
+/** Calls the timber wtf method if there are timber trees */
 fun wtf(t: Throwable) = Timber.wtf(t)
 
-/** Log at `priority` a message with optional format args.  */
-fun log(priority: Int, message: String, vararg args: Any) = Timber.log(priority, message, *args)
+/** Calls the timber log method if there are timber trees */
+inline fun log(priority: Int, t: Throwable, message: () -> String) = ifPlanted { Timber.log(priority, t, message()) }
 
-/** Log at `priority` an exception and a message with optional format args.  */
-fun log(priority: Int, t: Throwable, message: String, vararg args: Any) = Timber.log(priority, t, message)
+/** Calls the timber log method if there are timber trees */
+inline fun log(priority: Int, message: () -> String) = ifPlanted { Timber.log(priority, message()) }
 
-/** Log at `priority` an exception.  */
-fun log(priority: Int, t: Throwable) = Timber.log(priority, t)
-
-/** Set a one-time tag for use on the next logging call.  */
-fun tag(tag: String) = Timber.tag(tag)
+/** Calls the timber log method if there are timber trees */
+fun log(priority: Int, throwable: Throwable) = Timber.log(priority, throwable)
