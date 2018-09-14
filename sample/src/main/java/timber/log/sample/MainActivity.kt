@@ -1,4 +1,4 @@
-package com.ivianuu.timberextensions.sample
+package timber.log.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
