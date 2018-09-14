@@ -1,1 +1,1 @@
-include ':sample', ':timberextensions'
+include ':sample', ':lib'

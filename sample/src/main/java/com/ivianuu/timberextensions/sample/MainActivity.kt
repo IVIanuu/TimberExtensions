@@ -1,9 +1,7 @@
 package com.ivianuu.timberextensions.sample
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.ivianuu.timberextensions.d
-import timber.log.Timber
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
