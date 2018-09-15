@@ -22,5 +22,5 @@ android {
 
 dependencies {
     implementation Deps.androidxAppCompat
-    implementation project(":lib")
+    implementation project(':timberktx')
 }
