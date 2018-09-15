@@ -16,24 +16,32 @@
 
 @file:Suppress("NOTHING_TO_INLINE")
 
-package timber.log
+package com.ivianuu.timberktx
 
-inline fun v(t: Throwable? = null, message: () -> String) = log { Timber.v(t, message()) }
+import timber.log.Timber
+
+inline fun v(t: Throwable? = null, message: () -> String) =
+    log { Timber.v(t, message()) }
 inline fun v(t: Throwable?) = Timber.v(t)
 
-inline fun d(t: Throwable? = null, message: () -> String) = log { Timber.d(t, message()) }
+inline fun d(t: Throwable? = null, message: () -> String) =
+    log { Timber.d(t, message()) }
 inline fun d(t: Throwable?) = Timber.d(t)
 
-inline fun i(t: Throwable? = null, message: () -> String) = log { Timber.i(t, message()) }
+inline fun i(t: Throwable? = null, message: () -> String) =
+    log { Timber.i(t, message()) }
 inline fun i(t: Throwable?) = Timber.i(t)
 
-inline fun w(t: Throwable? = null, message: () -> String) = log { Timber.w(t, message()) }
+inline fun w(t: Throwable? = null, message: () -> String) =
+    log { Timber.w(t, message()) }
 inline fun w(t: Throwable?) = Timber.w(t)
 
-inline fun e(t: Throwable? = null, message: () -> String) = log { Timber.e(t, message()) }
+inline fun e(t: Throwable? = null, message: () -> String) =
+    log { Timber.e(t, message()) }
 inline fun e(t: Throwable?) = Timber.e(t)
 
-inline fun wtf(t: Throwable? = null, message: () -> String) = log { Timber.wtf(t, message()) }
+inline fun wtf(t: Throwable? = null, message: () -> String) =
+    log { Timber.wtf(t, message()) }
 inline fun wtf(t: Throwable?) = Timber.wtf(t)
 
 @PublishedApi

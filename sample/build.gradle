@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion Versions.compileSdk
     defaultConfig {
-        applicationId "timber.log.sample"
+        applicationId "com.ivianuu.timberktx.sample"
         minSdkVersion Versions.minSdk
         targetSdkVersion Versions.targetSdk
         versionCode Versions.versionCode
