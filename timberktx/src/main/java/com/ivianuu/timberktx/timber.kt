@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Manuel Wrage
+ * Copyright 2018 Manuel Wrage
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,8 +17,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
 package com.ivianuu.timberktx
-
-import timber.log.Timber
 
 inline fun v(t: Throwable? = null, message: () -> String) =
     log { Timber.v(t, message()) }
