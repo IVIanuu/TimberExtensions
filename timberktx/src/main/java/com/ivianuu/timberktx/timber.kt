@@ -18,6 +18,8 @@
 
 package com.ivianuu.timberktx
 
+import timber.log.Timber
+
 inline fun v(t: Throwable? = null, message: () -> String) =
     log { Timber.v(t, message()) }
 inline fun v(t: Throwable?) = Timber.v(t)
