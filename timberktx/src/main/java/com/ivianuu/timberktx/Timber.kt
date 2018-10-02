@@ -20,29 +20,70 @@ package com.ivianuu.timberktx
 
 import timber.log.Timber
 
-inline fun v(t: Throwable? = null, message: () -> String) =
-    log { Timber.v(t, message()) }
-inline fun v(t: Throwable?) = Timber.v(t)
+/**
+ * Invokes [Timber.v] if [Timber.treeCount] is > 0
+ */
+inline fun v(t: Throwable? = null, message: () -> String) = log { Timber.v(t, message()) }
 
+/**
+ * Invokes [Timber.v] if [Timber.treeCount] is > 0
+ */
+inline fun v(t: Throwable?) = log { Timber.v(t) }
+
+/**
+ * Invokes [Timber.d] if [Timber.treeCount] is > 0
+ */
 inline fun d(t: Throwable? = null, message: () -> String) =
     log { Timber.d(t, message()) }
-inline fun d(t: Throwable?) = Timber.d(t)
 
+/**
+ * Invokes [Timber.d] if [Timber.treeCount] is > 0
+ */
+inline fun d(t: Throwable?) = log { Timber.d(t) }
+
+/**
+ * Invokes [Timber.i] if [Timber.treeCount] is > 0
+ */
 inline fun i(t: Throwable? = null, message: () -> String) =
     log { Timber.i(t, message()) }
-inline fun i(t: Throwable?) = Timber.i(t)
 
+/**
+ * Invokes [Timber.i] if [Timber.treeCount] is > 0
+ */
+inline fun i(t: Throwable?) = log { Timber.i(t) }
+
+/**
+ * Invokes [Timber.w] if [Timber.treeCount] is > 0
+ */
 inline fun w(t: Throwable? = null, message: () -> String) =
     log { Timber.w(t, message()) }
-inline fun w(t: Throwable?) = Timber.w(t)
 
+/**
+ * Invokes [Timber.w] if [Timber.treeCount] is > 0
+ */
+inline fun w(t: Throwable?) = log { Timber.w(t) }
+
+/**
+ * Invokes [Timber.e] if [Timber.treeCount] is > 0
+ */
 inline fun e(t: Throwable? = null, message: () -> String) =
     log { Timber.e(t, message()) }
-inline fun e(t: Throwable?) = Timber.e(t)
 
+/**
+ * Invokes [Timber.e] if [Timber.treeCount] is > 0
+ */
+inline fun e(t: Throwable?) = log { Timber.e(t) }
+
+/**
+ * Invokes [Timber.wtf] if [Timber.treeCount] is > 0
+ */
 inline fun wtf(t: Throwable? = null, message: () -> String) =
     log { Timber.wtf(t, message()) }
-inline fun wtf(t: Throwable?) = Timber.wtf(t)
+
+/**
+ * Invokes [Timber.wtf] if [Timber.treeCount] is > 0
+ */
+inline fun wtf(t: Throwable?) = log { Timber.wtf(t) }
 
 @PublishedApi
 internal inline fun log(block: () -> Unit) {
