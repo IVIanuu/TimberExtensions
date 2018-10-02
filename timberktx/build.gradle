@@ -18,7 +18,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = "com.github.IVIanuu"
+group='com.github.ivianuu'
 
 android {
     compileSdkVersion Versions.compileSdk
