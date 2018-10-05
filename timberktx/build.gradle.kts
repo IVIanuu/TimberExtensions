@@ -38,7 +38,7 @@ dependencies {
     api(Deps.timber)
 }
 
-val sourcesJar = task("sourcesJar", Jar::class) {
+task("sourcesJar", Jar::class) {
     from(android.sourceSets["main"].java.srcDirs)
     classifier = "sources"
 }
@@ -50,13 +50,13 @@ task("javadoc", Javadoc::class) {
     classpath += configurations.compile
 }
 
-val javadocJar = task("javadocJar", Jar::class) {
+task("javadocJar", Jar::class) {
     val javadoc = dependsOn("javadoc")
     classifier = "javadoc"
     from(javadoc.property("destinationDir"))
 }
 
 artifacts {
-    add("archives", sourcesJar)
-    add("archives", javadocJar)
+    add("archives", tasks.getByName("sourcesJar"))
+    add("archives", tasks.getByName("javadocJar"))
 }
