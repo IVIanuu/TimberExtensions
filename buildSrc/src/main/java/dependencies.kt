@@ -13,9 +13,8 @@ object Build {
 
 object Publishing {
     const val groupId = "com.ivianuu.timberktx"
-    const val version = "git"
     const val vcsUrl = "https://github.com/IVIanuu/timber-ktx"
-    const val desc = "Kotlin extensions for the timber library"
+    const val version = "git"
 }
 
 object Versions {
